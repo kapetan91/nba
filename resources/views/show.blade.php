@@ -10,8 +10,9 @@
 	    <h4>{{ $team->address }}</h4>
 	    <br>
 	    <br>
-	        
-	    <p>{{ $team->player }}</p>  
+	       @foreach ($team->$players as $player) 
+	    <p>{{ $player->first_name }} , {{$player->last_name }}</p>  
+	    	@endforeach
 	</div>
   
 @endsection

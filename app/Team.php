@@ -11,4 +11,9 @@ class Team extends Model
    static function getTeams(){
    	return self::where('name', 1)->get();
    }
+
+  public function player()
+    {
+     return $this->belongsTo(Player::class, 'team_id');   
+    }
 }
